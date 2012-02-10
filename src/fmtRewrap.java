@@ -2,6 +2,10 @@
 //James Dressel
 public class fmtRewrap {
 	static public String fmtRewrap(String input, int width){
+		
+		if (width <1){
+			throw new IllegalArgumentException("Width must be at least 1");
+		}
 		StringBuilder build = new StringBuilder();
 		StringBuilder line = new StringBuilder();
 		String[] words = input.split(" ");
