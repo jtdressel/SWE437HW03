@@ -11,7 +11,7 @@ public class fmtRewrapTest {
 	String expected;
 
 	@Test
-	public void testFmtRewrap() {
+	public void testFmtRewrapFox() {
 		inputString = "fox";
 		width = 30;
 		expected = "fox\n";
