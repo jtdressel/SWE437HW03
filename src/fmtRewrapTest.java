@@ -33,5 +33,17 @@ public class fmtRewrapTest {
 		expected = "This sentence is longer than\nthe width so it should take\nmultiple lines\n";
 		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
+	
+	
+	@Test
+	public void testFmtRewrapWordLongerThanWidth(){
+		inputString = "This sentence is longer than the width so it should take multiple lines";
+		width = 5;
+		expected = "This\nsentence\nis\nlonger\nthan\nthe\nwidth\nso\nit\nshould\ntake\nmultiple\nlines\n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	}
+	
+	
+	
 
 }
