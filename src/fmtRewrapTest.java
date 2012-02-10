@@ -5,7 +5,7 @@ import org.junit.Test;
 
 
 public class fmtRewrapTest {
-
+	
 	String inputString;
 	int width;
 	String output;
@@ -13,7 +13,10 @@ public class fmtRewrapTest {
 
 	@Test
 	public void testFmtRewrap() {
-		fail("Not yet implemented");
+		inputString = "fox";
+		width = 30;
+		expected = "fox\n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
 
 }
