@@ -17,5 +17,13 @@ public class fmtRewrapTest {
 		expected = "fox\n";
 		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
+	
+	@Test
+	public void testFmtRewrapBox(){
+		inputString = "box";
+		width = 30;
+		expected = "box\n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	}
 
 }
