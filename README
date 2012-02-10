@@ -1,0 +1,12 @@
+SWE 437 Homework 3 
+Spring 2012
+Beginning TDD
+
+The goal of this exercise is to get you to practice the process of TDD: Test, Code, Refactor.
+
+Towards this end, (re)build the fmtRewrap functionality with TDD. Start with the given API (namely, a static method). As your tests proceed, you may decide that an object-orientation is more appropriate. It is not required that you make this transition; I'm more interested in where the tests lead you.
+
+You should turn in a story, with tests and snippets of code as illustrations. (Koskela Chapter 2 is a great model for this.) Each snippet of code should do only as much as is needed by the tests considered so far. Your story should start with a single "happy path" test case, and should take you through a handful of further test cases.
+
+Grading: 
+This is really a "completion" type of assignment. Write each test, build only the code that passes the test, and document the progress. Refactor as necessary, and document that.
