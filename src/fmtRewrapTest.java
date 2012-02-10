@@ -44,6 +44,13 @@ public class fmtRewrapTest {
 	}
 	
 	
+	@Test(expected=IllegalArgumentException.class)
+	public void testFmtRewrapZeroWidth(){
+		inputString = "Fox";
+		width = 0;
+		fmtRewrap.fmtRewrap(inputString, width);
+	}
+	
 	
 
 }
