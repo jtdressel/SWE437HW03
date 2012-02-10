@@ -51,6 +51,12 @@ public class fmtRewrapTest {
 		fmtRewrap.fmtRewrap(inputString, width);
 	}
 	
+	@Test(expected=IllegalArgumentException.class)
+	public void testFmtRewrapNegativeWidth(){
+		inputString = "Fox";
+		width = -5;
+		fmtRewrap.fmtRewrap(inputString, width);
+	}
 	
 
 }
