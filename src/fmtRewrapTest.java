@@ -8,7 +8,6 @@ public class fmtRewrapTest {
 	
 	String inputString;
 	int width;
-	String output;
 	String expected;
 
 	@Test
