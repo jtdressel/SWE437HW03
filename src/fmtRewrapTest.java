@@ -25,5 +25,13 @@ public class fmtRewrapTest {
 		expected = "box\n";
 		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
+	
+	@Test
+	public void testFmtRewrapLongSentence(){
+		inputString = "This sentence is longer than the width so it should take multiple lines";
+		width = 30;
+		expected = "This sentence is longer than\nthe width so it should take\nmultiple lines\n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	}
 
 }
