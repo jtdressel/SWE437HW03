@@ -2,6 +2,9 @@
 //James Dressel
 public class fmtRewrap {
 	static public String fmtRewrap(String input, int width){
+		if (input== null){
+			throw new NullPointerException("The input string must not be null");
+		}
 		
 		if (width <1){
 			throw new IllegalArgumentException("Width must be at least 1");
