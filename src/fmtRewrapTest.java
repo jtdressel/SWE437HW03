@@ -1,31 +1,42 @@
 //fmtRewrapTest.java
 //James Dressel
 import static org.junit.Assert.*;
+
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
-
+@RunWith(Parameterized.class)//Best practices would break this file into
+		//multiple files, but I figured ease of grading trumps performance
 public class fmtRewrapTest {
 	
 	String inputString;
 	int width;
 	String expected;
 
-	@Test
-	public void testFmtRewrapFox() {
-		inputString = "fox";
-		width = 30;
-		expected = "fox\n";
-		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	
+	public fmtRewrapTest(String inputString, int width, String expected){
+		this.inputString = inputString;
+		this.width = width;
+		this.expected = expected;
+	}
+	
+	@Parameterized.Parameters 
+	public static Collection primeNumbers(){
+		return Arrays.asList(new Object[][]{
+				{"fox", 30, "fox\n"},
+				{"box", 30, "box\n"}	
+		});
 	}
 	
 	@Test
-	public void testFmtRewrapBox(){
-		inputString = "box";
-		width = 30;
-		expected = "box\n";
+	public void testSingleWord() {
 		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
-	
+		
 	@Test
 	public void testFmtRewrapLongSentence(){
 		inputString = "This sentence is longer than the width so it should take multiple lines";
