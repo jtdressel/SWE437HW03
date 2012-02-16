@@ -58,7 +58,7 @@ public class fmtRewrapTest {
 		fmtRewrap.fmtRewrap(inputString, width);
 	}
 	
-	@Test(expected=IllegalArgumentException.class)
+	@Test(expected=NullPointerException.class)
 	public void testFmtRewrapNullInput(){
 		width = 5;
 		fmtRewrap.fmtRewrap(null, width);
